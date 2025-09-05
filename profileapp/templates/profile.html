@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ name }} | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">{{ name }}</h1>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#education" class="hover:text-blue-600">Education</a>
+        <a href="#experience" class="hover:text-blue-600">Experience</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / ABOUT -->
+  <section id="about" class="py-16 bg-gradient-to-r from-blue-50 via-white to-blue-100">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+      <!-- Left: Intro -->
+      <div class="text-left">
+        <h2 class="text-4xl font-extrabold">Hi, I'm {{ name }}</h2>
+        <p class="mt-4 text-lg">
+          A passionate Software Developer with expertise in Full Stack Development, building scalable applications, and delivering innovative solutions.
+        </p>
+        <div class="flex flex-wrap gap-6 mt-6">
+          <a href="mailto:{{ email }}" class="text-blue-600 hover:underline">📧 {{ email }}</a>
+          <a href="tel:{{ phone }}" class="text-blue-600 hover:underline">📞 {{ phone }}</a>
+          <a href="{{ linkedin }}" target="_blank" class="text-blue-600 hover:underline">🔗 LinkedIn</a>
+          <a href="{{ github }}" target="_blank" class="text-blue-600 hover:underline">💻 GitHub</a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Image -->
+      <div class="flex justify-center md:justify-end">
+        <img src="{{ profile_image }}" alt="Profile Photo" 
+             class="w-56 h-56 rounded-full shadow-lg border-4 border-white object-cover">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="py-16 max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-8 text-blue-600">Education</h3>
+    <div class="space-y-6">
+      <div>
+        <h4 class="text-xl font-semibold">B.E Computer Science and Engineering</h4>
+        <p class="text-gray-700">MVJ College of Engineering, Bangalore | Jun 2023 | CGPA: 8.79</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold">PUC (PCMB)</h4>
+        <p class="text-gray-700">Vaishanavi Chethana PU College, Davangere | Jun 2019 | 78.33%</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold">CBSE</h4>
+        <p class="text-gray-700">Gnyana Sudha Vidyalaya, Bidar | Jun 2017 | CGPA: 9.4</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-8 text-blue-600">Work Experience</h3>
+      <div class="space-y-8">
+        <div>
+          <h4 class="text-xl font-semibold">Solar Secure Solutions | Full Stack Developer</h4>
+          <p class="text-gray-700 italic">Feb 2020 - May 2020</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-700">
+            <li>Developed production-ready code using modern front-end and back-end frameworks.</li>
+            <li>Created cross-platform UI web components and built responsive applications.</li>
+            <li>Collaborated with senior developers using HTML, CSS, JavaScript, React.js, and MongoDB.</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold">Talbotiq Private Limited | Software Developer</h4>
+          <p class="text-gray-700 italic">Malaysia | May 2023 - May 2024</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-700">
+            <li>Developed and maintained scalable web applications using Django and Python.</li>
+            <li>Conducted software testing to ensure product quality.</li>
+            <li>Collaborated with clients to gather requirements and deliver customized solutions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-16 max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-8 text-blue-600">Projects</h3>
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-lg">Gesture Recognition & Mouse Control</h4>
+        <p class="text-gray-700 mt-2">Applied landmark detection to identify hand points and trained ML models using Python & MySQL.</p>
+        <a href="#" target="_blank" class="text-blue-600 hover:underline mt-3 block">🔗 View Repository</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-lg">E-Commerce Website</h4>
+        <p class="text-gray-700 mt-2">Developed a full-stack e-commerce platform using the MERN stack.</p>
+        <a href="#" target="_blank" class="text-blue-600 hover:underline mt-3 block">🔗 View Repository</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-lg">Quiz-Grid App</h4>
+        <p class="text-gray-700 mt-2">Built a dynamic quiz app with interactive UI using React.js.</p>
+        <a href="#" target="_blank" class="text-blue-600 hover:underline mt-3 block">🔗 View Repository</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-lg">Twitter Website Clone</h4>
+        <p class="text-gray-700 mt-2">Developed a Twitter-like application using Django, REST APIs, and PostgreSQL.</p>
+        <a href="#" target="_blank" class="text-blue-600 hover:underline mt-3 block">🔗 View Repository</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-8 text-blue-600">Skills</h3>
+      <ul class="grid md:grid-cols-2 gap-4 text-gray-700">
+        <li><strong>Languages:</strong> Java, Python, PHP, MySQL, RDBMS</li>
+        <li><strong>Web Development:</strong> React, JavaScript, TypeScript, HTML/CSS, REST API</li>
+        <li><strong>Backend:</strong> MongoDB, Django, Java Spring Boot</li>
+        <li><strong>Tools:</strong> Git, PHPMyAdmin</li>
+        <li><strong>Soft Skills:</strong> Problem-Solving, Communication, Team Collaboration, Customer Service</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white py-6 mt-10 shadow-inner">
+    <div class="max-w-6xl mx-auto text-center text-gray-600">
+      © {{ name }} | Built with Django & TailwindCSS
+    </div>
+  </footer>
+
+</body>
+</html>

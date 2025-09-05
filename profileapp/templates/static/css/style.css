@@ -1,0 +1,100 @@
+/* General Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.hero .overlay {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero-content { position: relative; z-index: 2; }
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero .tagline { font-size: 1.2rem; margin-bottom: 15px; }
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #00aced;
+  font-weight: bold;
+}
+
+/* Main Content */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.card h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-left: 5px solid #2980b9;
+  padding-left: 10px;
+}
+.job h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+.job span { font-weight: normal; font-size: 0.9rem; color: #777; }
+
+/* Projects Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+.project {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Skills */
+.skills li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  background: #2c3e50;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero .tagline { font-size: 1rem; }
+}
